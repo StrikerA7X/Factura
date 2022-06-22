@@ -34,34 +34,34 @@ public class Computadora {
         return ram;
     }
 
-    public void setRam(String titulo) {
-        this.ram = titulo;
+    public void setRam(String ram) {
+        this.ram = ram;
     }
 
     public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(String director) {
-        this.modelo = director;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public int getMarca() {
         return marca;
     }
 
-    public void setMarca(int numeroActores) {
-        this.marca = numeroActores;
+    public void setMarca(int marca) {
+        this.marca = marca;
     }
 
     @Override
     public String toString() {
         return "Pelicula{" + "codigo=" + codigo + ", ram=" + ram + ", modelo=" + modelo + ", marca=" + marca + '}';
-    }
+    }   
 
     public Object getram() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+}
 
     public Object getmodelo() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

@@ -1,25 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package Servicio;
 
 import Modelo.Computadora;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author USER
  */
-public interface ComputadoraServicio {
+public class ComputadoraServicio implements IComputadoraServicio {
+
+    public static List<Computadora> computadoraList = new ArrayList<>();
     
-    /**
-     *
-     * @param computadora
-     * @return
-     */
-    public Computadora crear(Computadora computadora);
-    public Computadora buscarPorCodigo(int Codigo);
-    public List<Computadora> listar();
-    
+    @Override
+    public Computadora crear(Computadora computadora) {
+        ComputadoraServicio.computadoraList.add(computadora);
+        return computadora;
+        
+    }
+
+    @Override
+    public Computadora buscarPorCodigo(int i) {
+        var computadora = new Computadora();
+        for(Computadora p:ComputadoraServicio.computadoraList){
+            if(p.getCodigo()==i){
+                computadora=p;
+                break;
+            }
+        }
+        return computadora;
+    }
+
+    @Override
+    public List<Computadora> listar() {
+        return ComputadoraServicio.computadoraList;
+    }
+
 }

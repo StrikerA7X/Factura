@@ -2,7 +2,7 @@
 package Controlador;
 
 import Modelo.Computadora;
-import Servicio.ComputadorServicio;
+import Servicio.ComputadoraServicio;
 import java.util.List;
 
 /**
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class ComputadoraControl {
 
-    private final ComputadorServicio Servicio = new ComputadorServicio();
+    private final ComputadoraServicio Servicio = new ComputadoraServicio();
     
     public Computadora crear(String []args){
         var computadora = new Computadora(Integer.valueOf(args[0]), args[1], args[2], Integer.valueOf(args[3]));
