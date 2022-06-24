@@ -18,6 +18,7 @@ public class Factura {
     private Date fecha;
     private int total;
     private int cantidad;
+    public int getCodigo;
 
     public Factura(int numFactura, Cliente unCliente, String direccion, Producto unProducto, Date fecha, int total, int cantidad) {
         this.numFactura = numFactura;

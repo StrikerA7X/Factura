@@ -52,16 +52,16 @@ public class FacturaServicio implements IFacturaSerivicio {
     @Override
       public Factura buscarPorCodigo(int codigoFactura) {
         Factura factura=null;
-        for(var f:this.facturaList){
-            if(codigoFactura==f.getCodigo()){
-                factura=f;
+        for(var f:FacturaServicio.facturaList){
+            if(codigoFactura==f.getCodigo){factura=f;} 
+            else {
                 break;
             }
      }
         return factura;
     }
 
-    @Override
+  
     
     public int buscarposicion(Factura factura) {
     int posicion=-1;
